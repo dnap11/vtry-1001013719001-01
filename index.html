@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" href="./css/slick.css"/>
+<link rel="stylesheet" href="./css/aos.css"/>
+<link rel="stylesheet" href="./css/styles.css"/>
+<link rel="stylesheet" href="./css/responsive.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<script src="./js/jquery.js"></script>
+<script src="./js/slick.min.js"></script>
+<style>
+    .fancybox-slide--iframe .fancybox-content{
+        width: 80%;
+    }
+</style>
+
+<!-- GA -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136025975-78"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136025975-78');
+</script>
+
+<!-- set data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "LocalBusiness",
+    "name": "宝山不動産　株式会社",
+    "image": "https://www.takarayama-kaitori.com/images/logo.png",
+    "telephone": "048-931-0003",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "我孫子１丁目９－１",
+        "addressLocality": "我孫子市",
+        "addressRegion": "千葉県",
+        "postalCode": "270-1166"
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "9:00",
+            "closes": "18:00"
+        }
+    ]
+}
+</script>
+</head>
+
+<body id="index">
+<div id="wrapper">
+
+    <!-- header start -->
+        <header class="fixed">
+            <div class="header_top">
+                <div class="d_flex justify_between">
+                    <div class="headertop_left">
+                        <p><span>我孫子市の不動産買取・売却なら宝山不動産｜業歴50年の代表みずからが対応</span></p>
+                    </div>
+                    <div class="headertop_right">
+                        <div class="headertop_all_info d_flex">
+                            <div class="headertop_time d_flex">
+                                <div class="timect d_flex ali_center">
+                                    <p>営業時間</p>
+                                    <span>9:00～18:00</span>
+                                </div>
+                                <div class="timect d_flex ali_center">
+                                    <p>定休日</p>
+                                    <span>水曜日</span>
+                                </div>
+                            </div>
+                            <div class="headertop_phone">
+                                <span class="icon_phone">
+                                    <img loading="lazy" width="22" height="22" src="./images/icon_phone.png" alt="">
+                                </span>
+                                <p>04-7184-1011</p>
+                            </div>
+                            <div class="headertop_mail">
+                                <a href="" target="_blank">
+                                    <div class="mail_button">
+                                        <span>
+                                            <img loading="lazy" width="19" height="14" src="./images/icon_mail.png" alt="">
+                                        </span>
+                                        <p>無料お問い合わせ・査定依頼はこちら</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="d_flex justify_between ali_center">
+                    <div class="headerbottom_left">
+                        <div class="logo_header">
+                            <h1>
+                                <a href="">
+                                    <span>我孫子市の不動産買取・売却なら</span>
+                                    宝山不動産 株式会社
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="headerbottom_right">
+                        <div class="menu_header">
+                            <ul class="menu_list">
+                                <li>
+                                    <a href="">
+                                        <div class="menu_icon">
+                                            <p>
+                                                <img loading="lazy" src="./images/img_menu01.png" alt="">
+                                            </p>
+                                        </div>
+                                        <div class="menu_title">
+                                            <p>選ばれる理由</p>
+                                        </div>
+                                    </a>
+                                  
+                                </li>
+                                <li class="has_dropdown">
+                                    <a href="javascript:;">
+                                        <div class="menu_icon">
+                                            <p>
+                                                <img loading="lazy" src="./images/img_menu02.png" alt="">
+                                            </p>
+                                        </div>
+                                        <div class="menu_title">
+                                            <p>サービスについて</p>
+                                        </div>
+                                    </a>
+                                    <div class="menu_dropdown">
+                                        <div class="inner">
+                                            <div class="menu_dropdown_list">
+                                                <div class="menu_name">
+                                                    <div class="menu_sub_icon">
+                                                        <p><img loading="lazy" src="./images/icon_sub_2.png" alt=""></p>
+                                                    </div>
+                                                    <div class="menu_sub_title">
+                                                        <p>サービスについて</p>
+                                                        <span>Service</span>
+                                                    </div>
+                                                </div>
+                                                <div class="menu_sub_list">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="">【早く売りたい】当社買取</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">【高く売りたい】仲介売却</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">【転勤・引っ越しなら】住み替え</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="">【ローン返済で困っている】任意売却</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">【相続した後どうする？】相続・借地権</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">【空き家で困っている】空き家管理</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="has_dropdown">
+                                    <a href="javascript:;">
+                                        <div class="menu_icon">
+                                            <p>
+                                                <img loading="lazy" src="./images/img_menu03.png" alt="">
+                                            </p>
+                                        </div>
+                                        <div class="menu_title">
+                                            <p>初めて売る方へ</p>
+                                        </div>
+                                    </a>
+                                    <div class="menu_dropdown">
+                                        <div class="inner">
+                                            <div class="menu_dropdown_list">
+                                                <div class="menu_name">
+                                                    <div class="menu_sub_icon">
+                                                        <p><img loading="lazy" src="./images/icon_sub_3.png" alt=""></p>
+                                                    </div>
+                                                    <div class="menu_sub_title">
+                                                        <p>初めて売る方へ</p>
+                                                        <span>First</span>
+                                                    </div>
+                                                </div>
+                                                <div class="menu_sub_list">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/fisrt/">売却成功のためのコツ</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/first/#first_ttl01/">売却方法一覧</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/first/cost/">売却時にかかる諸費用</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/first/cost/">お問い合わせから売却までの流れ</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="has_dropdown">
+                                    <a href="javascript:;">
+                                        <div class="menu_icon">
+                                            <p>
+                                                <img loading="lazy" src="./images/img_menu04.png" alt="">
+                                            </p>
+                                        </div>
+                                        <div class="menu_title">
+                                            <p>実績・お客様の声</p>
+                                        </div>
+                                    </a>
+                                    <div class="menu_dropdown">
+                                        <div class="inner">
+                                            <div class="menu_dropdown_list">
+                                                <div class="menu_name">
+                                                    <div class="menu_sub_icon">
+                                                        <p><img loading="lazy" src="./images/icon_sub_4.png" alt=""></p>
+                                                    </div>
+                                                    <div class="menu_sub_title">
+                                                        <p>サービスについて</p>
+                                                        <span>Case</span>
+                                                    </div>
+                                                </div>
+                                                <div class="menu_sub_list">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/case/">売却事例・実績</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/case/case_ttl01">お客様の声</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="has_dropdown">
+                                    <a href="javascript:;">
+                                        <div class="menu_icon">
+                                            <p>
+                                                <img loading="lazy" src="./images/img_menu05.png" alt="">
+                                            </p>
+                                        </div>
+                                        <div class="menu_title">
+                                            <p>宝山不動産について</p>
+                                        </div>
+                                    </a>
+                                    <div class="menu_dropdown">
+                                        <div class="inner">
+                                            <div class="menu_dropdown_list">
+                                                <div class="menu_name">
+                                                    <div class="menu_sub_icon">
+                                                        <p><img loading="lazy" src="./images/icon_sub_5.png" alt=""></p>
+                                                    </div>
+                                                    <div class="menu_sub_title">
+                                                        <p>サービスについて</p>
+                                                        <span>Company</span>
+                                                    </div>
+                                                </div>
+                                                <div class="menu_sub_list">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/company/about/">会社案内</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/company/about/#company_ttl01">代表挨拶</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/company/about/#company_ttl02">アクセス</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/company/qa/">よくあるご質問</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="extra_excel sp">
+                                    <div class="hotline">
+                                        <p><a class="sweetlink" onclick="gtag('event', 'tel', {'event_category': 'sp'});" href=":0471841011" >04-7184-1011</a></p>
+                                    </div>
+                                    <div class="time_menu">
+                                        <p>営業時間><span>9:00～18:00</span></p>
+                                        <p>定休日：水曜日</p>
+                                    </div>
+                                    <div class="link_button">
+                                        <div class="extra_link">
+                                            <a target="_blank" href="https://goo.gl/maps/ztRx7ynybNtJVrS28">Googleマップはこちら ＞</a>
+                                        </div>
+                                        <div class="extra_link">
+                                            <a href="/contact/">メールでのお問い合わせ ＞</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_bar">
+                            <p></p>
+                            <span>Menu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <div id="main">
+        <div class="box_banner slide_auto">
+            <div class="box_banner_bg " style="background-image: url(./images/banner_main.jpg);">
+                <div class="box_banner_info">
+                    <div class="banner_info_meta">
+                        <h2>
+                            <img loading="lazy" src="./images/back_text01.png" alt="">
+                        </h2>
+                    </div>
+                    <div class="banner_info_title">
+                        <p><span>家･土地の売却は</span></p>
+                        <p><span><em>まるごと</em>まかせて<em>安心</em>！</span></p>
+                    </div>
+                    <div class="banner_info_check">
+                        <div class="info_list">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <img loading="lazy" src="./images/icon_check.png" alt="">
+                                    </p>
+                                    <span>早い</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <img loading="lazy" src="./images/icon_check.png" alt="">
+                                    </p>
+                                    <span>確実</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <img loading="lazy" src="./images/icon_check.png" alt="">
+                                    </p>
+                                    <span>秘密厳守</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info_desc">
+                            <p>あなたの大切な不動産を買取ります</p>
+                        </div>
+                        <div class="info_tag">
+                            <ul>
+                                <li class="bg_orange">
+                                    <span>当社買取</span>
+                                </li>
+                                <li class="bg_blue01">
+                                    <span>仲介売却</span>
+                                </li>
+                                <li class="bg_green">
+                                    <span>住み替え</span>
+                                </li>
+                                <li class="bg_pink">
+                                    <span>ローン<br>
+                                        任意売却</span>
+                                </li>
+                                <li class="bg_purple">
+                                    <span>相続<br>
+                                        遺産分割</span>
+                                </li>
+                                <li class="bg_blu02">
+                                    <span>空き家<br>
+                                        管理</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_banner_bg" style="background-image: url(./images/banner_main_02.jpg);">
+                <div class="box_banner_info">
+                    <div class="banner_info_meta">
+                        <h2>
+                            <img loading="lazy" src="./images/back_text01.png" alt="">
+                        </h2>
+                    </div>
+                    <div class="banner_info_title">
+                        <p><span>家･土地の売却は</span></p>
+                        <p><span><em>まるごと</em>まかせて<em>安心</em>！</span></p>
+                    </div>
+                    <div class="banner_info_check">
+                        <div class="info_list">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <img loading="lazy" src="./images/icon_check.png" alt="">
+                                    </p>
+                                    <span>早い</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <img loading="lazy" src="./images/icon_check.png" alt="">
+                                    </p>
+                                    <span>確実</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <img loading="lazy" src="./images/icon_check.png" alt="">
+                                    </p>
+                                    <span>秘密厳守</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info_desc">
+                            <p>あなたの大切な不動産を買取ります</p>
+                        </div>
+                        <div class="info_tag">
+                            <ul>
+                                <li class="bg_orange">
+                                    <span>当社買取</span>
+                                </li>
+                                <li class="bg_blue01">
+                                    <span>仲介売却</span>
+                                </li>
+                                <li class="bg_green">
+                                    <span>住み替え</span>
+                                </li>
+                                <li class="bg_pink">
+                                    <span>ローン<br>
+                                        任意売却</span>
+                                </li>
+                                <li class="bg_purple">
+                                    <span>相続<br>
+                                        遺産分割</span>
+                                </li>
+                                <li class="bg_blu02">
+                                    <span>空き家<br>
+                                        管理</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_movie">
+            <div class="inner">
+                <div class="movie_img">
+                    <a href="https://www.youtube.com/watch?v=kESUfmJrRAE&t=8s" data-fancybox="video-gallery">
+                        <img loading="lazy" src="./images/clip_img.jpg" alt="">
+                        <div class="movie_meta">
+                            <span>Introduction Movie</span>
+                            <p>宝山不動産が選ばれる理由</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box_introduce">
+            <div class="inner">
+                <div class="box_introduce_01">
+                    <div class="box_introuce_info">
+                        <div class="box_introduce_info01">
+                            <div class="info01_row_span">
+                                <span>他社でなかなか売れない…</span>
+                                <span>至急、現金化したい</span>
+                            </div>
+                            <p>そんなお悩みはございませんか？</p>
+                        </div>
+                        <div class="box_introduce_info02">
+                            <p>我孫子で<span>創業48年</span>の</p>
+                        </div>
+                        <div class="box_introduce_info03">
+                            <p><span>宝山不動産</span>なら</p>
+                        </div>
+                        <div class="box_introduce_info_dot">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div class="box_introduce_info04">
+                            <p>「スピード解決」</p>
+                            <span>いたします！</span>
+                        </div>
+                        <div class="list_tick sp">
+                            <ul>
+                                <li>早い</li>
+                                <li>確実</li>
+                                <li>秘密厳守</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box_introuce_img">
+                        <p data-aos="fade-up">
+                            <img loading="lazy" src="./images/introduce_01.png" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div class="box_introduce_02">
+                    <div class="list_tick pc">
+                        <ul>
+                            <li>早い</li>
+                            <li>確実</li>
+                            <li>秘密厳守</li>
+                        </ul>
+                    </div>
+                    <div class="box_introduce_02_desc">
+                        <p>他社に負けない<br class="sp"><span>「迅速な対応」</span>が自慢です！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_ballon">
+            <div class="inner">
+                <div class="box_ballon_info">
+                    <div class="img_people pc">
+                        <p>
+                            <img loading="lazy" src="./images/people.png" alt="">
+                        </p>
+                    </div>
+                    <div class="box_ballon_01">
+                        <span>そろそろ終活を検討中</span>
+                        <p>相続する前に</p>
+                        <p><em>現金化</em>しておきたい</p>
+                    </div>
+                    <div class="box_ballon_02">
+                        <span>価格は下がってもいいから</span>
+                        <p><em>手間なく、早く</em></p>
+                        <p>不動産を売りたい</p>
+                    </div>
+                    <div class="box_ballon_03">
+                        <span>時間は多少かかってもいいので</span>
+                        <p><em>少しでも高く</em></p>
+                        <p>家を売りたい</p>
+                    </div>
+                    <div class="box_ballon_04">
+                        <span>今の家は手放したくないが</span>
+                        <p><em>ローンの返済</em></p>
+                        <p>が追いつかない</p>
+                    </div>
+                    <div class="box_ballon_05">
+                        <span>借地権を相続したけれど</span>
+                        <p><em>地主さんと揉めずに</em></p>
+                        <p>売却したい</p>
+                    </div>
+                    <div class="img_people sp">
+                        <p>
+                            <img loading="lazy" src="./images/people.png" alt="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_ballon_confirm">
+            <div class="box_ballon_title">
+                <h3 class="title_h3">宝山不動産ならすべて<span>解決</span>！</h3>
+                <p>不動産のことなら<em><br class="sp">「</em><span>全部</span><em>」</em>おまかせください</p>
+            </div>
+            <div class="box_ballon_desc">
+                <p>「当社買取」を中心に仲介売却、住み替え、任意売却、相続、借地権、空き家 <br>管理など幅広いお悩みに対応が可能です。まずはご相談ください。当社が解決に導きます。</p>
+            </div>
+        </div>
+        <div class="box_services">
+            <div class="blur_text">
+                <span>Service</span>
+            </div>
+            <div class="inner">
+                <div class="box_services_title">
+                    <p class="title_p">Service</p>
+                    <h3 class="title_h3">当社の<span>売却サービス一覧</span></h3>
+                </div>
+                <div class="box_services_list">
+                    <a href="/service/buy/" class="box_services_ct">
+                        <div class="box_services_img">
+                            <p>
+                                <img loading="lazy" src="./images/sv_img01.jpg" alt="">
+                            </p>
+                        </div>
+                        <div class="box_services_info">
+                            <div class="boxsv_info_meta">
+                                <p>早く確実に売りたいなら</p>
+                            </div>
+                            <div class="boxsv_info_title">
+                                <p>当社買取</p>
+                            </div>
+                            <div class="boxsv_info_desc">
+                                <p>不動産を「すぐに売りたい」方におすすめの売却方法。販売活動をする期間が不要なため、「早い」「確実」な売却が可能です。当社が「秘密厳守」で、周りの人に知られずに不動産をスピード買取いたします。</p>
+                            </div>
+                            <div class="boxsv_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/sv_ic_01.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/service/" class="box_services_ct border_color2">
+                        <div class="box_services_img">
+                            <p>
+                                <img loading="lazy" src="./images/sv_img02.jpg" alt="">
+                            </p>
+                        </div>
+                        <div class="box_services_info">
+                            <div class="boxsv_info_meta">
+                                <p>できるだけ高く売りたいなら</p>
+                            </div>
+                            <div class="boxsv_info_title">
+                                <p id="text_color2">仲介売却</p>
+                            </div>
+                            <div class="boxsv_info_desc">
+                                <p>「少しでも高く売りたい」方におすすめ。市場の相場に近い価格で売却できる可能性が高い方法です。</p>
+                            </div>
+                            <div class="boxsv_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/sv_ic_02.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/service/relocation/" class="box_services_ct border_color3 not_img">
+                        <div class="box_services_info">
+                            <div class="boxsv_info_meta">
+                                <p>転勤・引っ越しなら</p>
+                            </div>
+                            <div class="boxsv_info_title">
+                                <p id="text_color3">住み替え</p>
+                            </div>
+                            <div class="boxsv_info_desc">
+                                <p>今の家を売って新しい家に住み替えるには、「売り先行」と「買い先行」の二つの方法があります。</p>
+                            </div>
+                            <div class="boxsv_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/sv_ic_03.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/service/loan/" class="box_services_ct border_color4 not_img">
+                        <div class="box_services_info">
+                            <div class="boxsv_info_meta">
+                                <p>ローン返済で困っているなら</p>
+                            </div>
+                            <div class="boxsv_info_title">
+                                <p id="text_color4">任意売却</p>
+                            </div>
+                            <div class="boxsv_info_desc">
+                                <p>住宅ローンの支払いでお困りの場合に、不利な競売を避けられる方法です。プライバシーも守られます。</p>
+                            </div>
+                            <div class="boxsv_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/sv_ic_04.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="service/inheritance/" class="box_services_ct border_color5 not_img">
+                        <div class="box_services_info">
+                            <div class="boxsv_info_meta">
+                                <p>相続した・相続する予定なら</p>
+                            </div>
+                            <div class="boxsv_info_title">
+                                <p id="text_color5">相続・借地権</p>
+                            </div>
+                            <div class="boxsv_info_desc">
+                                <p>「不動産を相続した」「相続した物件に借地権が付いていた」といった場合も、当社なら状況に応じたご提案が可能です。</p>
+                            </div>
+                            <div class="boxsv_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/sv_ic_05.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/service/vacant" class="box_services_ct border_color6 not_img">
+                        <div class="box_services_info">
+                            <div class="boxsv_info_meta">
+                                <p>空き家で困っているなら</p>
+                            </div>
+                            <div class="boxsv_info_title">
+                                <p id="text_color6">空き家管理</p>
+                            </div>
+                            <div class="boxsv_info_desc">
+                                <p>空き家は、適切に管理することが必要です。当社では空き家の買取・売却に加え、管理もお任せいただけます。</p>
+                            </div>
+                            <div class="boxsv_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/sv_ic_06.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box_services_btn">
+            <div class="btn_main">
+                <a href="/first/#first_ttl01">売却方法一覧はこちら</a>
+            </div>
+        </div>
+        <div class="box_reason">
+            <div class="blur_text">
+                <span>Reason</span>
+            </div>
+            <div class="inner">
+                <div class="box_reason_meta">
+                    <p>圧倒的な「<span>買</span><span>取</span><span>力</span>」で<br class="sp">早く・確実に売れる！</p>
+                </div>
+                <div class="box_reason_title">
+                    <h3 class="title_h3">宝山不動産が<span>選ばれる理由</span></h3>
+                    <p class="desc_p">宝山不動産は、複雑かつさまざまな不動産トラブルを気軽に相談できる「拠りどころ」でありたいと考えています。じっくりとお話を伺い、豊富な知識・実績を元に最適なご提案をいたします</p>
+                </div>
+                <div class="box_reason_sec">
+                    <h4>お客様へ<span>5つ</span>のお約束</h4>
+                </div>
+                <div class="box_reason_list">
+                    <a href="" class="box_reason_ct">
+                        <div class="box_reason_images">
+                            <img loading="lazy" src="./images/reason01.jpg" alt="">
+                            <div class="box_reason_text">
+                                <p>お約束<span>01</span></p>
+                                <h5>早い</h5>
+                            </div>
+                        </div>
+                        <div class="box_reason_desc">
+                            <p>創業48年の当社では、業界歴50年以上の代表が対応。「早い」「確実」な買取を実現します。物件の管理にも自信がある上、地元である我孫子のことを誰よりも熟知しているため、常に的確なご提案が可能です。</p>
+                        </div>
+                        <div class="box_reason_tag_list">
+                            <div class="box_reason_tag_ct">
+                                <p>早く確実に買取ります</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>現金化まで最短 1 週間</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_reason_ct">
+                        <div class="box_reason_images">
+                            <img loading="lazy" src="./images/reason02.jpg" alt="">
+                            <div class="box_reason_text">
+                                <p>お約束<span>02</span></p>
+                                <h5>実績</h5>
+                            </div>
+                        </div>
+                        <div class="box_reason_desc">
+                            <p>大手不動産会社にはない圧倒的な知見や裏切らない正直な意見、先見の明を強みにしたご提案が当社の特徴です。弁護士、司法書士など士業との強いネットワークもあるため、法的な分野もカバーします。</p>
+                        </div>
+                        <div class="box_reason_tag_list">
+                            <div class="box_reason_tag_ct">
+                                <p>法律面もサポート</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>士業との強い連携で</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>業界 50年超の代表が対応</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_reason_ct">
+                        <div class="box_reason_images">
+                            <img loading="lazy" src="./images/reason03.jpg" alt="">
+                            <div class="box_reason_text">
+                                <p>お約束<span>03</span></p>
+                                <h5>安心</h5>
+                            </div>
+                        </div>
+                        <div class="box_reason_desc">
+                            <p>当社が基本としているのは、仲介売却のように公に買主様を募集しない「不動産買取」。「人に知られない」「近隣の方にも事情を勘ぐられない」不動産売却が可能です。プライバシーをお守りします。</p>
+                        </div>
+                        <div class="box_reason_tag_list">
+                            <div class="box_reason_tag_ct">
+                                <p>秘密は厳守いたします</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>非公開で売却が可能</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_reason_ct">
+                        <div class="box_reason_images">
+                            <img loading="lazy" src="./images/reason04.jpg" alt="">
+                            <div class="box_reason_text">
+                                <p>お約束<span>04</span></p>
+                                <h5>正直</h5>
+                            </div>
+                        </div>
+                        <div class="box_reason_desc">
+                            <p>「正直」「裏切らない人」と言っていただくことが多い「人情に厚い」代表は、常に飾らず、ストレートに語り、今すべき判断・決断に対して本音でぶつかっていきます。絶対に裏切らないことをお約束します。</p>
+                        </div>
+                        <div class="box_reason_tag_list">
+                            <div class="box_reason_tag_ct">
+                                <p>お伝えします</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>本音ではっきりと</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>不誠実は嫌いです</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_reason_ct">
+                        <div class="box_reason_images">
+                            <img loading="lazy" src="./images/reason05.jpg" alt="">
+                            <div class="box_reason_text">
+                                <p>お約束<span>05</span></p>
+                                <h5>駅近</h5>
+                            </div>
+                        </div>
+                        <div class="box_reason_desc">
+                            <p>最寄り駅は、JR常盤線「我孫子駅」。そこから徒歩2分の場所に当社があります。ガラス扉の明るい店内にお入りいただくと、スタッフが笑顔でお出迎えします。さまざまなお悩みに、代表が真摯に向き合います。</p>
+                        </div>
+                        <div class="box_reason_tag_list">
+                            <div class="box_reason_tag_ct">
+                                <p>お支えします</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>暮らしのおそばで</p>
+                            </div>
+                            <div class="box_reason_tag_ct">
+                                <p>我孫子駅北口徒歩２分</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="bg_vector1">
+                        <div class="vector1_img1">
+                            <p>
+                                <img loading="lazy" src="./images/bg_reason_01.png" alt="">
+                            </p>
+                        </div>
+                        <div class="vector1_img2">
+                            <p>
+                                <img loading="lazy" src="./images/bg_reason_02.png" alt="">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg_vector2">
+                        <div class="vector2_img1">
+                            <p>
+                                <img loading="lazy" src="./images/bg_reason_03.png" alt="">
+                            </p>
+                        </div>
+                        <div class="vector2_img2">
+                            <p>
+                                <img loading="lazy" src="./images/bg_reason_04.png" alt="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_reason_btn">
+                    <div class="btn_main">
+                        <a href="/first/#first_ttl01">選ばれる理由はこちら</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_voice">
+            <div class="inner">
+                <div class="box_voice_title">
+                    <p class="title_p">Results / Voice</p>
+                    <h3 class="title_h3">宝山不動産の<span>実績・お客様の声</span></h3>
+                </div>
+                <div class="box_voice_list">
+                    <a href="/case/" class="box_voice_ct">
+                        <div class="box_voice_images">
+                            <p>
+                                <img loading="lazy" src="./images/voice_img1.jpg" alt="">
+                            </p>
+                        </div>
+                        <div class="box_voice_info">
+                            <div class="box_voice_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/bg_voice_icon1.png" alt="">
+                                </p>
+                            </div>
+                            <div class="box_voice_desc">
+                                <p>売却事例・実績</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="case/case_ttl01" class="box_voice_ct">
+                        <div class="box_voice_images">
+                            <p>
+                                <img loading="lazy" src="./images/voice_img2.jpg" alt="">
+                            </p>
+                        </div>
+                        <div class="box_voice_info">
+                            <div class="box_voice_icon">
+                                <p>
+                                    <img loading="lazy" src="./images/bg_voice_icon2.png" alt="">
+                                </p>
+                            </div>
+                            <div class="box_voice_desc">
+                                <p>お客様の声</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box_first">
+            <div class="box_first_01">
+                <div class="blur_text">
+                    <span>First</span>
+                </div>
+                <div class="box_first_title">
+                    <p class="title_p">Beginner's Guide</p>
+                    <h3 class="title_h3">初めて不動産を売る方へ</h3>
+                </div>
+            </div>
+            <div class="box_first_02">
+                <div class="inner">
+                    <div class="cloud1">
+                        <p>
+                            <img loading="lazy" src="./images/cloud_1.png" alt="">
+                        </p>
+                    </div>
+                    <div class="cloud2">
+                        <p>
+                            <img loading="lazy" src="./images/cloud_2.png" alt="">
+                        </p>
+                    </div>
+                    <div class="bird">
+                        <p>
+                            <img loading="lazy" src="./images/bird.png" alt="">
+                        </p>
+                    </div>
+                    <div class="box_first_meta">
+                        <p>失敗しないために</p>
+                        <p><span>知</span><span>っ</span><span>て</span><span>お</span><span>き</span><span>た</span><span>い</span><span>基</span><span>本</span>を<br class="sp">おまとめしました</p>
+                    </div>
+                </div>
+                <div class="box_first_body">
+                    <div class="inner">
+                        <div class="box_first_desc">
+                            <p>「信頼できる不動産会社の選び方」「売却のタイミング」などを知っておくことが、不動産売却を成功させるコツです。初めて不動産を売却する」「一体どこから始めたらいいかわからない」「売却にかかるお金や売却の流れを知っておきたい」方に向け、売却方法一覧や売却に必要な費用、お問い合わせからの流れといった不動産売却の基礎知識をご紹介します。</p>
+                        </div>
+                        <div class="box_first_list">
+                            <a href="/first/"  data-aos="fade-right"  data-aos-delay="0" class="box_first_ct">
+                                <div class="box_first_ct_icon">
+                                    <p>
+                                        <img loading="lazy" src="./images/first_icon1.png" alt="">
+                                    </p>
+                                </div>
+                                <div class="box_first_ct_title">
+                                    <p>不動産会社の<br>
+                                        <span>選び方</span></p>
+                                </div>
+                            </a>
+                            <a href="/first/#first_ttl01"  data-aos="fade-right"  data-aos-delay="300" class="box_first_ct">
+                                <div class="box_first_ct_icon">
+                                    <p>
+                                        <img loading="lazy" src="./images/first_icon2.png" alt="">
+                                    </p>
+                                </div>
+                                <div class="box_first_ct_title">
+                                    <p>売却の<br>
+                                        <span>タイミング</span></p>
+                                </div>
+                            </a>
+                            <a href="/first/" data-aos="fade-right"  data-aos-delay="600" class="box_first_ct">
+                                <div class="box_first_ct_icon">
+                                    <p>
+                                        <img loading="lazy" src="./images/first_icon3.png" alt="">
+                                    </p>
+                                </div>
+                                <div class="box_first_ct_title">
+                                    <p>評価アップの<br>
+                                        <span>ポイント</span></p>
+                                </div>
+                            </a>
+                            <a href="/first/cost" data-aos="fade-right"  data-aos-delay="900" class="box_first_ct">
+                                <div class="box_first_ct_icon">
+                                    <p>
+                                        <img loading="lazy" src="./images/first_icon4.png" alt="">
+                                    </p>
+                                </div>
+                                <div class="box_first_ct_title">
+                                    <p><span>費用・税金</span><br>について</p>
+                                </div>
+                            </a>
+                            <a href="/first/flow" data-aos="fade-right"  data-aos-delay="1200" class="box_first_ct">
+                                <div class="box_first_ct_icon">
+                                    <p>
+                                        <img loading="lazy" src="./images/first_icon5.png" alt="">
+                                    </p>
+                                </div>
+                                <div class="box_first_ct_title">
+                                    <p>売却までの<br>
+                                        <span>流れ</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="box_first_btn">
+                            <div class="btn_main">
+                                <a href="/first/">最初から知りたい方はこちら</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_greenting">
+            <div class="blur_text">
+                <span>Greenting</span>
+            </div>
+            <div class="inner">
+                <div class="box_greenting_list">
+                    <div class="box_greenting_info">
+                        <div class="box_greenting_title">
+                            <p class="title_p">Greenting</p>
+                            <h3 class="title_h3">代表挨拶</h3>
+                        </div>
+                        <div class="box_greenting_desc pc">
+                            <p>我孫子市にある、宝山不動産　株式会社のホームページにお越しいただきありがとうございます。</p>
+                            <p>当社は創業以来48年にわたり、この我孫子市に密着して不動産業を営んできました。とくに不動産買取を得意としており、お客様のプライバシーをしっかりお守りしながら「スピード買取」を実現。常に正直に、まっすぐにお客様と向き合い、お悩みごとを一緒に担げるパートナーになりたいと考えています。</p>
+                            <p>不動産の「拠りどころ」として、業界歴50年以上の代表みずからが複雑な案件もしっかり解決いたします。どんなことでもお気軽にご相談ください。</p>
+                        </div>
+                        <div class="box_greenting_btn pc">
+                            <div class="btn_main">
+                                <a href="">代表紹介はこちら</a>
+                            </div>
+                            <div class="btn_main">
+                                <a href="">会社案内はこちら</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_greenting_images">
+                        <p>
+                            <img loading="lazy" src="./images/greenting01.JPG" alt="">
+                        </p>
+                    </div>
+                    <div class="box_greenting_desc sp">
+                        <p>我孫子市にある、宝山不動産　株式会社のホームページにお越しいただきありがとうございます。</p>
+                        <p>当社は創業以来48年にわたり、この我孫子市に密着して不動産業を営んできました。とくに不動産買取を得意としており、お客様のプライバシーをしっかりお守りしながら「スピード買取」を実現。常に正直に、まっすぐにお客様と向き合い、お悩みごとを一緒に担げるパートナーになりたいと考えています。</p>
+                        <p>不動産の「拠りどころ」として、業界歴50年以上の代表みずからが複雑な案件もしっかり解決いたします。どんなことでもお気軽にご相談ください。</p>
+                    </div>
+                    <div class="box_greenting_btn sp">
+                        <div class="btn_main">
+                            <a href="">代表紹介はこちら</a>
+                        </div>
+                        <div class="btn_main">
+                            <a href="">会社案内はこちら</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_news">
+            <div class="inner">
+                <div class="box_news_title">
+                    <p class="title_p">News / Column</p>
+                    <h3 class="title_h3">お知らせ・コラム</h3>
+                </div>
+                <div class="box_news_list">
+                    <a href="#" class="box_news_ct">
+                        <div class="box_news_date">
+                            <p>2022.01.31</p>
+                        </div>
+                        <div class="box_news_text">
+                            <p>営業時間変更のお知らせ</p>
+                        </div>
+                    </a>
+                    <a href="#" class="box_news_ct">
+                        <div class="box_news_date">
+                            <p>2022.01.31</p>
+                        </div>
+                        <div class="box_news_text">
+                            <p>営業時間変更のお知らせその他テキストが入りますテキストダミーテキスト</p>
+                        </div>
+                    </a>
+                    <a href="#" class="box_news_ct">
+                        <div class="box_news_date">
+                            <p>2022.01.31</p>
+                        </div>
+                        <div class="box_news_text">
+                            <p>営業時間変更のお知らせその他テキストが入りますテキストダミーテキスト</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="box_news_btn">
+                    <div class="btn_main">
+                        <a href="/info/">お知らせ・コラム一覧はこちら</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_access">
+            <div class="inner">
+                <div class="box_access_list">
+                    <div class="box_access_map">
+                        <p>
+                            <iframe onclick="gtag('event', 'map', {'event_category': 'sp'});" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d202.06167253943374!2d140.0107522!3d35.8738413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189d5d08972191%3A0xbf45cac7301b51c7!2z5a6d5bGx5LiN5YuV55Sj77yI5qCq77yJ!5e0!3m2!1sja!2sjp!4v1650958741550!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </p>
+                    </div>
+                    <div class="box_access_info">
+                        <div class="box_access_title">
+                            <p class="title_p">Access</p>
+                            <h3 class="title_h3">アクセス</h3>
+                        </div>
+                        <div class="box_access_number">
+                            <p>〒270-1166<br>
+                                千葉県我孫子市我孫子１丁目９－１</p>
+                        </div>
+                        <div class="box_access_text">
+                            <p>・お電車でお越しの方へ<br>
+                                <span>JR常磐線「我孫子駅」北口 徒歩2分</span></p>
+                        </div>
+                        <div class="box_access_btn">
+                            <div class="btn_main">
+                                <a target="_blank" href="https://goo.gl/maps/ztRx7ynybNtJVrS28">Googleマップはこちら</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_plugin_right">
+            <div class="box_plugin">
+                <div class="plugin_preview">
+                    <p>
+                        <img loading="lazy" src="./images/icon_house_psd.png" alt="">
+                    </p>
+                    <span>お困りですか？</span>
+                </div>
+                <div class="plugin_show">
+                    <p><a href="/first/">売り方を知りたい</a></p>
+                    <p><a href="/first/cost/">費用を知りたい</a></p>
+                    <p><a href="/company/about/#company_ttl02">アクセスを知りたい</a></p>
+                </div>
+            </div>
+            <div class="box_plugin">
+                <div class="plugin_preview">
+                    <p>
+                        <img loading="lazy" src="./images/icon_ques.png" alt="">
+                    </p>
+                    <span>よくあるご質問</span>
+                </div>
+                <div class="plugin_show">
+                    <p><a href="">お困りですか？</a></p>
+                    <p><a href="">お困りですか？</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="box_plugin_bottom">
+            <a href="" class="box_plugin_b">
+                <div class="plugin_b_icon">
+                    <p>
+                        <img loading="lazy" src="./images/tel_icon_w.png" alt="">
+                    </p>
+                </div>
+                <div class="plugin_b_text">
+                    <p><span>電話</span>でお問い合わせ</p>
+                </div>
+            </a>
+            <a href="" class="box_plugin_b">
+                <div class="plugin_b_icon">
+                    <p>
+                        <img loading="lazy" src="./images/line_icon.png" alt="">
+                    </p>
+                </div>
+                <div class="plugin_b_text">
+                    <p><span>Google</span>マップはこちら</p>
+                </div>
+            </a>
+            <a href="" class="box_plugin_b">
+                <div class="plugin_b_icon">
+                    <p>
+                        <img loading="lazy" src="./images/mail_icon_w.png" alt="">
+                    </p>
+                </div>
+                <div class="plugin_b_text">
+                    <p><span>メール</span>でお問い合わせ</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- main end -->
+
+
+    <!-- footer start -->
+    <footer>
+        <div class="footer_contact">
+            <div class="inner">
+                <div class="footer_contact_box">
+                    <div class="all_footer_contact">
+                        <div class="footer_contact_title">
+                            <p>家・土地を売りたい、相続など不動産のことなら</p>
+                        </div>
+                        <div class="footer_contact_h4">
+                            <h4>どうぞお気軽に<span>宝</span><span>山</span><span>不</span><span>動</span><span>産</span>へご相談ください</h4>
+                        </div>
+                        <div class="footer_contact_list">
+                            <div class="footer_contact_left">
+                                <div class="footer_contact_mail">
+                                    <span>メールでのお問い合わせ</span>
+                                    <p>
+                                        <img loading="lazy" src="./images/ft_contact_mail.png" alt="">
+                                    </p>
+                                </div>
+                                <div class="footer_contact_btn">
+                                    <div class="btn_main">
+                                        <a href="/contact/">無料お問い合わせ<br>
+                                            査定依頼はこちら</a>
+                                    </div>
+                                </div>
+                                <div class="footer_contact_desc">
+                                    <p>24時間いつでも受け付けております</p>
+                                </div>
+                            </div>
+                            <div class="footer_contact_right">
+                                <div class="footer_contact_info">
+                                    <div class="footer_contact_meta">
+                                        <p>お電話でのお問い合わせ</p>
+                                    </div>
+                                    <div class="footer_contact_call_icon">
+                                        <p>
+                                            <img loading="lazy" src="./images/call_ring.png" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="footer_contact_number">
+                                        <p><a href="tel:0471841011" onclick="gtag('event', 'tel', {'event_category': 'sp'});" class="sweetlink">04-7184-1011</a></p>
+                                    </div>
+                                    <div class="footer_contact_time">
+                                        <p><span>営業時間</span>9:00～18:00</p>
+                                        <p><span>定休日</span>水曜日</p>
+                                    </div>
+                                </div>
+                                <div class="footer_contact_images">
+                                    <p>
+                                        <img loading="lazy" src="./images/footer_contact_man.png" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_main">
+            <div class="inner">
+                <div class="footer_main_row">
+                    <div class="footer_main_left">
+                        <div class="logo_ft">
+                            <a href="">
+                                <span>我孫子市の不動産買取・売却なら</span>
+                                宝山不動産 株式会社
+                            </a>
+                        </div>
+                        <div class="footer_main_number">
+                            <p>〒270-1166　千葉県我孫子市我孫子１丁目９－１</p>
+                            <p>電話：04-7184-1011</p>
+                        </div>
+                        <div class="footer_main_time">
+                            <p><span>営業時間</span>9:00～18:00</p>
+                            <p><span>定休日</span>水曜日</p>
+                        </div>
+                    </div>
+                    <div class="footer_main_right">
+                        <div class="footer_menu">
+                            <ul>
+                                <li>
+                                    <a href="" class="title_ft">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="title_ft">不動産を初めて売る方へ</a>
+                                </li>
+                                <li>
+                                    <a href="">売却成功のためのコツ</a>
+                                </li>
+                                <li>
+                                    <a href="">売却方法一覧</a>
+                                </li>
+                                <li>
+                                    <a href="">売却時にかかる諸費用</a>
+                                </li>
+                                <li>
+                                    <a href="">お問い合わせから売却までの流れ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" class="title_ft">サービスについて</a>
+                                </li>
+                                <li>
+                                    <a href="">【早く売りたい】当社買取</a>
+                                </li>
+                                <li>
+                                    <a href="">【高く売りたい】仲介売却</a>
+                                </li>
+                                <li>
+                                    <a href="">【転勤・引っ越しなら】住み替え</a>
+                                </li>
+                                <li>
+                                    <a href="">【ローン返済で困っている】任意売却</a>
+                                </li>
+                                <li>
+                                    <a href="">【相続した後どうする？】相続・借地権</a>
+                                </li>
+                                <li>
+                                    <a href="">【空き家で困っている】空き家管理</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" class="title_ft">宝山不動産について</a>
+                                </li>
+                                <li>
+                                    <a href="">宝山不動産が選ばれる理由</a>
+                                </li>
+                                <li>
+                                    <a href="">よくあるご質問</a>
+                                </li>
+                                <li>
+                                    <a href="">会社案内</a>
+                                </li>
+                                <li>
+                                    <a href="">代表紹介</a>
+                                </li>
+                                <li>
+                                    <a href="">アクセス</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" class="title_ft">実績</a>
+                                </li>
+                                <li>
+                                    <a href="">売却事例・実績</a>
+                                </li>
+                                <li>
+                                    <a href="">お客様の声</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="inner">
+                <div class="copyright_flex">
+                    <div class="text_copy">
+                        <p>Copyright (C) 2022 宝山不動産株式会社 All Rights Reserved.</p>
+                    </div>
+                    <div class="link_next">
+                        <a href="">プライバシーポリシー　＞</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="backtoTop">
+        <div class="backtoTop_btn">
+            <p>TOPへ</p>
+        </div>
+    </div>
+    <!-- footer end -->
+
+
+    <!-- <p id="btn_top"><img loading="lazy" src="./images/btn_top.png" alt="トップに戻る"></p>     -->
+</div>
+<script src="./js/aos.js"></script> 
+<script src="./js/track-tel.js"></script> 
+<script src="./js/sweetlink.js"></script> 
+<script src="./js/jquery.scroll.js"></script> 
+<script src="./js/top.js"></script> 
+<script src="./js/common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+</html>
